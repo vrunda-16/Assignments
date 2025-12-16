@@ -104,12 +104,13 @@ public class JdbcConnection {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void updateStudentCourse(Scanner sc) {
 		System.out.println("Enter roll no :");
 		int rollno = sc.nextInt();
 		System.out.println("Enter new Course :");
 		String course = sc.next();
+		course = " "+course;
 		String sql = "update Student set course = ? where rollno = ?";
 		try {
 			Connection conn = getConnection();
